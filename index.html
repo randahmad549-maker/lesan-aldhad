@@ -5,141 +5,231 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>لسان الضاد</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
 body {
     margin: 0;
-    font-family: "Tahoma", sans-serif;
-    background: linear-gradient(to bottom, #1e3c72, #2a5298);
-    color: #333;
+    font-family: 'Amiri', serif;
+    line-height: 2;
+    background: linear-gradient(rgba(20,30,60,0.95), rgba(40,50,90,0.95)),
+    url("https://www.transparenttextures.com/patterns/arabesque.png");
+    background-attachment: fixed;
+    color: #f5e6c8;
+}
+
+/* إطار علوي زخرفي */
+.top-border {
+    height: 20px;
+    background: repeating-linear-gradient(
+        45deg,
+        #d4af37,
+        #d4af37 10px,
+        #b8860b 10px,
+        #b8860b 20px
+    );
 }
 
 /* شريط التنقل */
 nav {
-    background-color: #162447;
-    padding: 15px;
+    background: linear-gradient(to right, #b8860b, #d4af37);
+    padding: 18px;
     text-align: center;
+    position: sticky;
+    top: 0;
 }
 
 nav a {
-    color: white;
+    color: #162447;
     text-decoration: none;
-    margin: 0 20px;
-    font-weight: bold;
-    font-size: 18px;
+    margin: 0 25px;
+    font-weight: 700;
+    font-size: 20px;
+    transition: 0.3s;
 }
 
 nav a:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* زخرفة عامة */
+.decor {
+    text-align: center;
+    font-size: 32px;
     color: #ffd700;
+    margin: 20px 0;
 }
 
 /* الهيدر */
 header {
     text-align: center;
-    padding: 60px 20px;
-    color: white;
+    padding: 90px 20px 60px;
 }
 
 header h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-size: 65px;
+    color: #ffd700;
+    text-shadow: 3px 3px 10px #000;
 }
 
-header p {
-    font-size: 18px;
-}
-
-/* المحتوى */
+/* الأقسام */
 .section {
-    background: white;
-    margin: 30px auto;
-    padding: 30px;
+    background: linear-gradient(to bottom, #fff8dc, #f5deb3);
+    color: #162447;
+    margin: 60px auto;
+    padding: 45px;
     width: 85%;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(212,175,55,0.4);
+    border: 3px double #d4af37;
+    position: relative;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
 }
 
-.section:hover {
-    transform: translateY(-5px);
+/* زخرفة أعلى كل قسم */
+.section::before {
+    content: "❁ ❖ ❁";
+    position: absolute;
+    top: -25px;
+    right: 50%;
+    transform: translateX(50%);
+    background: #162447;
+    color: #ffd700;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .section h2 {
-    color: #1e3c72;
+    color: #b8860b;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* زر */
-.button {
-    display: inline-block;
-    background: #1e3c72;
-    color: white;
-    padding: 10px 20px;
-    margin-top: 15px;
-    border-radius: 25px;
-    text-decoration: none;
+.section h3 {
+    font-size: 30px;
+    color: #8b6508;
+    margin-top: 35px;
 }
 
-.button:hover {
-    background: #ffd700;
-    color: #000;
+.section hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #d4af37, transparent);
+    margin: 30px 0;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    border: 4px solid #d4af37;
+    transition: 0.4s;
+}
+
+img:hover {
+    transform: scale(1.05);
 }
 
 /* الفوتر */
 footer {
     text-align: center;
-    padding: 20px;
-    background: #162447;
-    color: white;
-    margin-top: 40px;
+    padding: 30px;
+    background: linear-gradient(to right, #b8860b, #d4af37);
+    color: #162447;
+    margin-top: 60px;
+}
+
+/* إطار سفلي */
+.bottom-border {
+    height: 20px;
+    background: repeating-linear-gradient(
+        -45deg,
+        #d4af37,
+        #d4af37 10px,
+        #b8860b 10px,
+        #b8860b 20px
+    );
 }
 </style>
 </head>
 
 <body>
 
+<div class="top-border"></div>
+
 <nav>
     <a href="#">الرئيسية</a>
     <a href="#history">تاريخ اللغة</a>
     <a href="#sciences">علوم اللغة</a>
-    <a href="#contact">تواصل معنا</a>
+    <a href="#calligraphy">الخط العربي</a>
 </nav>
 
 <header>
     <h1>لسان الضاد</h1>
-    <p>رحلة في تاريخ اللغة العربية وعلومها وجمالياتها</p>
+    <div class="decor">❁ ❖ ❁ ❖ ❁</div>
+    <p>رحلة معرفية في تاريخ اللغة العربية وعلومها وفنونها</p>
 </header>
 
 <div class="section" id="history">
     <h2>تاريخ اللغة العربية</h2>
-    <p>
-        تمتد اللغة العربية إلى جذور عريقة في شبه الجزيرة العربية،
-        وتطورت عبر العصور من الجاهلية إلى العصر الإسلامي ثم العصر الحديث،
-        محافظةً على مكانتها كلغة القرآن الكريم.
-    </p>
-    <a href="#" class="button">اقرأ المزيد</a>
+    <p>نشأت اللغة العربية في شبه الجزيرة العربية وتطورت عبر العصور.</p>
+    <hr>
+    <img src="history.jpg">
 </div>
 
 <div class="section" id="sciences">
-    <h2>علوم اللغة</h2>
-    <p>
-        تشمل علوم اللغة العربية النحو، الصرف، البلاغة، العروض،
-        وعلم الأصوات. وقد ساهم العلماء العرب في وضع أسس هذه العلوم
-        وتنظيمها عبر القرون.
-    </p>
-    <a href="#" class="button">استكشف العلوم</a>
+    <h2>علوم اللغة العربية</h2>
+    <p>تشمل النحو والصرف والبلاغة والعروض وعلم الأصوات.</p>
+    <hr>
+    <img src="sciences.jpg">
 </div>
 
-<div class="section" id="contact">
-    <h2>تواصل معنا</h2>
-    <p>
-        يمكنك التواصل معنا عبر البريد الإلكتروني:
-        example@email.com
-    </p>
-    <a href="#" class="button">إرسال رسالة</a>
+<div class="section" id="calligraphy">
+    <h2>أنواع الخط العربي</h2>
+
+    <h3>الخط الكوفي</h3>
+    <p>من أقدم الخطوط العربية.</p>
+    <hr>
+
+    <h3>خط النسخ</h3>
+    <p>الأكثر استخدامًا في الكتب.</p>
+    <hr>
+
+    <h3>خط الثلث</h3>
+    <p>يتميز بجمال انحناءاته.</p>
 </div>
 
 <footer>
     جميع الحقوق محفوظة © 2026
 </footer>
+
+<div class="bottom-border"></div>
+
+<script>
+const sections = document.querySelectorAll(".section");
+window.addEventListener("scroll", () => {
+    sections.forEach(section => {
+        const position = section.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        if(position < screenPosition){
+            section.classList.add("show");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
