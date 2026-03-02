@@ -2,75 +2,144 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>لسان الضاد</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Amiri&family=IBM+Plex+Sans+Arabic:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 body {
-    margin:0;
-    font-family: 'IBM Plex Sans Arabic', sans-serif;
-    background-color:#F5F1E8;
-    color:#091A2A;
+    margin: 0;
+    font-family: "Tahoma", sans-serif;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    color: #333;
 }
 
+/* شريط التنقل */
+nav {
+    background-color: #162447;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* الهيدر */
 header {
-    background:#0F3057;
-    color:#F5F1E8;
-    text-align:center;
-    padding:60px 20px;
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
 }
 
-h1 {
-    font-family:'Amiri', serif;
-    font-size:48px;
-    color:#C6A75E;
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
-section {
-    padding:60px 10%;
+header p {
+    font-size: 18px;
 }
 
-.card {
-    background:white;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.05);
-    margin-bottom:30px;
+/* المحتوى */
+.section {
+    background: white;
+    margin: 30px auto;
+    padding: 30px;
+    width: 85%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
 }
 
+.section:hover {
+    transform: translateY(-5px);
+}
+
+.section h2 {
+    color: #1e3c72;
+}
+
+/* زر */
+.button {
+    display: inline-block;
+    background: #1e3c72;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: #ffd700;
+    color: #000;
+}
+
+/* الفوتر */
 footer {
-    background:#091A2A;
-    color:#C6A75E;
-    text-align:center;
-    padding:20px;
+    text-align: center;
+    padding: 20px;
+    background: #162447;
+    color: white;
+    margin-top: 40px;
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+    <a href="#">الرئيسية</a>
+    <a href="#history">تاريخ اللغة</a>
+    <a href="#sciences">علوم اللغة</a>
+    <a href="#contact">تواصل معنا</a>
+</nav>
+
 <header>
     <h1>لسان الضاد</h1>
     <p>رحلة في تاريخ اللغة العربية وعلومها وجمالياتها</p>
 </header>
 
-<section>
-    <div class="card">
-        <h2>تاريخ اللغة العربية</h2>
-        <p>من الجاهلية إلى العصر الحديث...</p>
-    </div>
+<div class="section" id="history">
+    <h2>تاريخ اللغة العربية</h2>
+    <p>
+        تمتد اللغة العربية إلى جذور عريقة في شبه الجزيرة العربية،
+        وتطورت عبر العصور من الجاهلية إلى العصر الإسلامي ثم العصر الحديث،
+        محافظةً على مكانتها كلغة القرآن الكريم.
+    </p>
+    <a href="#" class="button">اقرأ المزيد</a>
+</div>
 
-    <div class="card">
-        <h2>علوم اللغة</h2>
-        <p>النحو، الصرف، البلاغة، العروض...</p>
-    </div>
-</section>
+<div class="section" id="sciences">
+    <h2>علوم اللغة</h2>
+    <p>
+        تشمل علوم اللغة العربية النحو، الصرف، البلاغة، العروض،
+        وعلم الأصوات. وقد ساهم العلماء العرب في وضع أسس هذه العلوم
+        وتنظيمها عبر القرون.
+    </p>
+    <a href="#" class="button">استكشف العلوم</a>
+</div>
+
+<div class="section" id="contact">
+    <h2>تواصل معنا</h2>
+    <p>
+        يمكنك التواصل معنا عبر البريد الإلكتروني:
+        example@email.com
+    </p>
+    <a href="#" class="button">إرسال رسالة</a>
+</div>
 
 <footer>
     جميع الحقوق محفوظة © 2026
 </footer>
 
 </body>
-
 </html>
