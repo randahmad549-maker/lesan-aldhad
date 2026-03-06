@@ -8,161 +8,170 @@
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Amiri', serif;
-    line-height: 2;
-    background: linear-gradient(rgba(20,30,60,0.95), rgba(40,50,90,0.95)),
-    url("https://www.transparenttextures.com/patterns/arabesque.png");
-    background-attachment: fixed;
-    color: #f5e6c8;
+
+body{
+margin:0;
+font-family:'Amiri',serif;
+line-height:2;
+background:linear-gradient(rgba(20,30,60,0.95),rgba(40,50,90,0.95)),
+url("https://www.transparenttextures.com/patterns/arabesque.png");
+background-attachment:fixed;
+color:#f5e6c8;
 }
 
-/* إطار علوي زخرفي */
-.top-border {
-    height: 20px;
-    background: repeating-linear-gradient(
-        45deg,
-        #d4af37,
-        #d4af37 10px,
-        #b8860b 10px,
-        #b8860b 20px
-    );
+/* الإطار العلوي */
+.top-border{
+height:20px;
+background:repeating-linear-gradient(
+45deg,
+#d4af37,
+#d4af37 10px,
+#b8860b 10px,
+#b8860b 20px
+);
 }
 
 /* شريط التنقل */
-nav {
-    background: linear-gradient(to right, #b8860b, #d4af37);
-    padding: 18px;
-    text-align: center;
-    position: sticky;
-    top: 0;
+
+nav{
+background:linear-gradient(to right,#b8860b,#d4af37);
+padding:18px;
+text-align:center;
+position:sticky;
+top:0;
 }
 
-nav a {
-    color: #162447;
-    text-decoration: none;
-    margin: 0 25px;
-    font-weight: 700;
-    font-size: 20px;
-    transition: 0.3s;
+nav a{
+color:#162447;
+text-decoration:none;
+margin:0 25px;
+font-weight:700;
+font-size:20px;
+transition:0.3s;
 }
 
-nav a:hover {
-    color: white;
-    transform: scale(1.1);
+nav a:hover{
+color:white;
+transform:scale(1.1);
 }
 
-/* زخرفة عامة */
-.decor {
-    text-align: center;
-    font-size: 32px;
-    color: #ffd700;
-    margin: 20px 0;
+/* زخرفة */
+
+.decor{
+text-align:center;
+font-size:32px;
+color:#ffd700;
+margin:20px 0;
 }
 
 /* الهيدر */
-header {
-    text-align: center;
-    padding: 90px 20px 60px;
+
+header{
+text-align:center;
+padding:90px 20px 60px;
 }
 
-header h1 {
-    font-size: 65px;
-    color: #ffd700;
-    text-shadow: 3px 3px 10px #000;
+header h1{
+font-size:65px;
+color:#ffd700;
+text-shadow:3px 3px 10px #000;
 }
 
 /* الأقسام */
-.section {
-    background: linear-gradient(to bottom, #fff8dc, #f5deb3);
-    color: #162447;
-    margin: 60px auto;
-    padding: 45px;
-    width: 85%;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(212,175,55,0.4);
-    border: 3px double #d4af37;
-    position: relative;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 1s ease;
+
+.section{
+background:linear-gradient(to bottom,#fff8dc,#f5deb3);
+color:#162447;
+margin:60px auto;
+padding:45px;
+width:85%;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(212,175,55,0.4);
+border:3px double #d4af37;
+position:relative;
+opacity:0;
+transform:translateY(40px);
+transition:all 1s ease;
 }
 
-/* زخرفة أعلى كل قسم */
-.section::before {
-    content: "❁ ❖ ❁";
-    position: absolute;
-    top: -25px;
-    right: 50%;
-    transform: translateX(50%);
-    background: #162447;
-    color: #ffd700;
-    padding: 5px 20px;
-    border-radius: 20px;
-    font-size: 22px;
-    letter-spacing: 5px;
+/* زخرفة القسم */
+
+.section::before{
+content:"❁ ❖ ❁";
+position:absolute;
+top:-25px;
+right:50%;
+transform:translateX(50%);
+background:#162447;
+color:#ffd700;
+padding:5px 20px;
+border-radius:20px;
+font-size:22px;
+letter-spacing:5px;
 }
 
-.section.show {
-    opacity: 1;
-    transform: translateY(0);
+.section.show{
+opacity:1;
+transform:translateY(0);
 }
 
-.section h2 {
-    color: #b8860b;
-    font-size: 42px;
-    text-align: center;
-    margin-bottom: 20px;
+.section h2{
+color:#b8860b;
+font-size:42px;
+text-align:center;
+margin-bottom:20px;
 }
 
-.section h3 {
-    font-size: 30px;
-    color: #8b6508;
-    margin-top: 35px;
+.section h3{
+font-size:30px;
+color:#8b6508;
+margin-top:35px;
 }
 
-.section hr {
-    border: none;
-    height: 2px;
-    background: linear-gradient(to right, transparent, #d4af37, transparent);
-    margin: 30px 0;
+.section hr{
+border:none;
+height:2px;
+background:linear-gradient(to right,transparent,#d4af37,transparent);
+margin:30px 0;
 }
 
-img {
-    width: 100%;
-    max-width: 500px;
-    display: block;
-    margin: 20px auto;
-    border-radius: 15px;
-    border: 4px solid #d4af37;
-    transition: 0.4s;
+img{
+width:100%;
+max-width:500px;
+display:block;
+margin:20px auto;
+border-radius:15px;
+border:4px solid #d4af37;
+transition:0.4s;
 }
 
-img:hover {
-    transform: scale(1.05);
+img:hover{
+transform:scale(1.05);
 }
 
 /* الفوتر */
-footer {
-    text-align: center;
-    padding: 30px;
-    background: linear-gradient(to right, #b8860b, #d4af37);
-    color: #162447;
-    margin-top: 60px;
+
+footer{
+text-align:center;
+padding:30px;
+background:linear-gradient(to right,#b8860b,#d4af37);
+color:#162447;
+margin-top:60px;
 }
 
-/* إطار سفلي */
-.bottom-border {
-    height: 20px;
-    background: repeating-linear-gradient(
-        -45deg,
-        #d4af37,
-        #d4af37 10px,
-        #b8860b 10px,
-        #b8860b 20px
-    );
+/* الإطار السفلي */
+
+.bottom-border{
+height:20px;
+background:repeating-linear-gradient(
+-45deg,
+#d4af37,
+#d4af37 10px,
+#b8860b 10px,
+#b8860b 20px
+);
 }
+
 </style>
 </head>
 
@@ -171,64 +180,161 @@ footer {
 <div class="top-border"></div>
 
 <nav>
-    <a href="#">الرئيسية</a>
-    <a href="#history">تاريخ اللغة</a>
-    <a href="#sciences">علوم اللغة</a>
-    <a href="#calligraphy">الخط العربي</a>
+<a href="#">الرئيسية</a>
+<a href="#history">تاريخ اللغة</a>
+<a href="#sciences">علوم اللغة</a>
+<a href="#calligraphy">الخط العربي</a>
+<a href="#scholars">علماء اللغة</a>
+<a href="#beauty">جماليات اللغة</a>
+<a href="#influence">تأثير اللغة</a>
 </nav>
 
 <header>
-    <h1>لسان الضاد</h1>
-    <div class="decor">❁ ❖ ❁ ❖ ❁</div>
-    <p>رحلة معرفية في تاريخ اللغة العربية وعلومها وفنونها</p>
+
+<h1>لسان الضاد</h1>
+
+<div class="decor">❁ ❖ ❁ ❖ ❁</div>
+
+<p>رحلة معرفية في تاريخ اللغة العربية وعلومها وفنونها</p>
+
 </header>
 
 <div class="section" id="history">
-    <h2>تاريخ اللغة العربية</h2>
-    <p>نشأت اللغة العربية في شبه الجزيرة العربية وتطورت عبر العصور.</p>
-    <hr>
-    <img src="history.jpg">
+
+<h2>تاريخ اللغة العربية</h2>
+
+<p>
+نشأت اللغة العربية في شبه الجزيرة العربية وتطورت عبر العصور،
+وأصبحت لغة العلم والثقافة في الحضارة الإسلامية.
+</p>
+
+<hr>
+
+<img src="history.jpg">
+
 </div>
 
 <div class="section" id="sciences">
-    <h2>علوم اللغة العربية</h2>
-    <p>تشمل النحو والصرف والبلاغة والعروض وعلم الأصوات.</p>
-    <hr>
-    <img src="sciences.jpg">
+
+<h2>علوم اللغة العربية</h2>
+
+<p>
+تشمل علوم اللغة العربية النحو والصرف والبلاغة والعروض وعلم الأصوات،
+وهي العلوم التي وضعت قواعد اللغة وفسرت أساليبها.
+</p>
+
+<hr>
+
+<img src="sciences.jpg">
+
 </div>
 
 <div class="section" id="calligraphy">
-    <h2>أنواع الخط العربي</h2>
 
-    <h3>الخط الكوفي</h3>
-    <p>من أقدم الخطوط العربية.</p>
-    <hr>
+<h2>أنواع الخط العربي</h2>
 
-    <h3>خط النسخ</h3>
-    <p>الأكثر استخدامًا في الكتب.</p>
-    <hr>
+<h3>الخط الكوفي</h3>
+<p>من أقدم الخطوط العربية وقد استُخدم في كتابة المصاحف القديمة.</p>
 
-    <h3>خط الثلث</h3>
-    <p>يتميز بجمال انحناءاته.</p>
+<hr>
+
+<h3>خط النسخ</h3>
+<p>يتميز بالوضوح وسهولة القراءة ويستخدم في الكتب والمطبوعات.</p>
+
+<hr>
+
+<h3>خط الثلث</h3>
+<p>من أجمل الخطوط العربية ويستخدم في الزخارف والعمارة الإسلامية.</p>
+
+</div>
+
+<div class="section" id="scholars">
+
+<h2>أشهر علماء اللغة العربية</h2>
+
+<h3>الخليل بن أحمد الفراهيدي</h3>
+<p>
+وضع علم العَروض وألف أول معجم عربي وهو كتاب العين.
+</p>
+
+<hr>
+
+<h3>سيبويه</h3>
+<p>
+صاحب كتاب "الكتاب" الذي يعد من أهم كتب النحو في اللغة العربية.
+</p>
+
+<hr>
+
+<h3>ابن جني</h3>
+<p>
+من كبار علماء اللغة وله إسهامات مهمة في علم الأصوات والاشتقاق.
+</p>
+
+</div>
+
+<div class="section" id="beauty">
+
+<h2>جماليات اللغة العربية</h2>
+
+<p>
+تتميز اللغة العربية بثراء مفرداتها ودقة تعبيرها وجمال أساليبها
+البلاغية مثل الاستعارة والتشبيه والكناية،
+مما جعلها لغة الشعر والأدب عبر العصور.
+</p>
+
+<hr>
+
+<img src="beauty.jpg">
+
+</div>
+
+<div class="section" id="influence">
+
+<h2>تأثير اللغة العربية في اللغات الأخرى</h2>
+
+<p>
+أثرت اللغة العربية في العديد من اللغات مثل الإسبانية والتركية
+والفارسية والأوردية، ودخلت آلاف الكلمات العربية إلى هذه اللغات
+بسبب التبادل الحضاري والثقافي عبر التاريخ.
+</p>
+
+<hr>
+
+<img src="influence.jpg">
+
 </div>
 
 <footer>
-    جميع الحقوق محفوظة © 2026
+
+جميع الحقوق محفوظة © 2026
+
 </footer>
 
 <div class="bottom-border"></div>
 
 <script>
-const sections = document.querySelectorAll(".section");
-window.addEventListener("scroll", () => {
-    sections.forEach(section => {
-        const position = section.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.3;
-        if(position < screenPosition){
-            section.classList.add("show");
-        }
-    });
+
+const sections=document.querySelectorAll(".section");
+
+window.addEventListener("scroll",()=>{
+
+sections.forEach(section=>{
+
+const position=section.getBoundingClientRect().top;
+
+const screenPosition=window.innerHeight/1.3;
+
+if(position<screenPosition){
+
+section.classList.add("show");
+
+}
+
 });
+
+});
+
 </script>
 
 </body>
