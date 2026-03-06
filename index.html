@@ -90,18 +90,31 @@ letter-spacing:10px;
 /* الأقسام */
 
 .section{
+
 background:linear-gradient(to bottom,#fff8dc,#f5deb3);
+
 color:#162447;
+
 margin:60px auto;
+
 padding:45px;
+
 width:85%;
+
 border-radius:20px;
+
 box-shadow:0 10px 30px rgba(212,175,55,0.5);
+
 border:3px double #d4af37;
+
 position:relative;
+
 opacity:0;
+
 transform:translateY(40px);
+
 transition:all 1s ease;
+
 }
 
 .section.show{
@@ -134,7 +147,7 @@ text-align:center;
 .section h3{
 font-size:30px;
 color:#8b6508;
-margin-top:35px;
+margin-top:20px;
 }
 
 .section hr{
@@ -177,40 +190,21 @@ max-width:700px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
-margin-top:40px;
-text-align:center;
+margin-top:30px;
 }
 
 .scholar-card{
-background:#fff8dc;
-padding:25px;
+background:white;
 border-radius:15px;
-border:3px solid #d4af37;
-box-shadow:0 5px 20px rgba(0,0,0,0.2);
-transition:0.4s;
-}
-
-.scholar-card:hover{
-transform:translateY(-10px) scale(1.05);
+padding:20px;
+text-align:center;
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
 }
 
 .scholar-card img{
-width:120px;
-height:120px;
-border-radius:50%;
-border:4px solid #d4af37;
-margin-bottom:15px;
-}
-
-.scholar-card h3{
-color:#b8860b;
-font-size:24px;
-margin-bottom:10px;
-}
-
-.scholar-card p{
-color:#333;
-font-size:16px;
+width:100%;
+height:200px;
+object-fit:cover;
 }
 
 /* الفوتر */
@@ -265,12 +259,14 @@ margin:10px 0;
 <div class="top-border"></div>
 
 <nav>
+
 <a href="#">الرئيسية</a>
 <a href="#history">تاريخ اللغة</a>
 <a href="#sciences">علوم اللغة</a>
 <a href="#calligraphy">الخط العربي</a>
 <a href="#influence">انتشار العربية</a>
 <a href="#scholars">العلماء</a>
+
 </nav>
 
 <header>
@@ -292,7 +288,7 @@ margin:10px 0;
 <p>
 تعد اللغة العربية من أقدم اللغات السامية في العالم،
 وقد نشأت في شبه الجزيرة العربية ثم تطورت عبر العصور
-حتى أصبحت لغة عالمية يتحدث بها مئات الملايين من الناس.
+حتى أصبحت لغة عالمية يتحدث بها مئات الملايين.
 </p>
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Arab_world_map.png">
@@ -306,25 +302,27 @@ margin:10px 0;
 <h2>علوم اللغة العربية</h2>
 
 <h3>علم النحو</h3>
+
 <p>
 يهتم علم النحو بدراسة قواعد الجملة العربية
-وتحديد مواقع الكلمات فيها مثل الفاعل والمفعول
-والمبتدأ والخبر.
+وتحديد مواقع الكلمات فيها.
 </p>
 
 <hr>
 
 <h3>علم الصرف</h3>
+
 <p>
-يدرس علم الصرف بنية الكلمة وتحولاتها
+يدرس علم الصرف بنية الكلمة وتحولاتها المختلفة
 مثل الاشتقاق وتصريف الأفعال.
 </p>
 
 <hr>
 
 <h3>علم البلاغة</h3>
+
 <p>
-يهتم علم البلاغة بجمال الأسلوب
+يهتم علم البلاغة بجمال الأسلوب والتعبير
 ويشمل علوم البيان والبديع والمعاني.
 </p>
 
@@ -338,8 +336,7 @@ margin:10px 0;
 
 <p>
 الخط العربي من أجمل الفنون الإسلامية
-وقد استخدم في تزيين المساجد والمصاحف
-والعمارة الإسلامية.
+وقد استخدم في تزيين المساجد والمصاحف.
 </p>
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Arabic_calligraphy_2.jpg">
@@ -353,15 +350,15 @@ margin:10px 0;
 <h2>انتشار اللغة العربية في العالم</h2>
 
 <p>
-تعد اللغة العربية إحدى اللغات العالمية الكبرى،
-وهي لغة رسمية في العديد من الدول،
-كما أنها لغة القرآن الكريم مما منحها انتشارًا واسعًا في العالم الإسلامي.
+تعد اللغة العربية إحدى اللغات العالمية الكبرى
+وهي لغة رسمية في العديد من الدول.
 </p>
 
 <div class="map">
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Arabic-speaking-world.png">
-</div>
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Arabic-speaking-world.png">
+
+</div>
 </div>
 
 <!-- العلماء -->
@@ -376,8 +373,7 @@ margin:10px 0;
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Sibawayh.jpg">
 <h3>سيبويه</h3>
 <p>
-أحد أعظم علماء النحو في التاريخ الإسلامي
-وصاحب كتاب "الكتاب".
+أحد أعظم علماء النحو وصاحب كتاب "الكتاب".
 </p>
 </div>
 
@@ -385,8 +381,7 @@ margin:10px 0;
 <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Al-Khalil_ibn_Ahmad_al-Farahidi.jpg">
 <h3>الخليل بن أحمد الفراهيدي</h3>
 <p>
-مؤسس علم العَروض
-وصاحب معجم "كتاب العين".
+مؤسس علم العروض وصاحب معجم "كتاب العين".
 </p>
 </div>
 
@@ -394,8 +389,7 @@ margin:10px 0;
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Ibn_Jinni.jpg">
 <h3>ابن جني</h3>
 <p>
-من كبار علماء اللغة العربية
-وصاحب كتاب "الخصائص".
+من كبار علماء اللغة ومؤلف كتاب "الخصائص".
 </p>
 </div>
 
@@ -403,8 +397,7 @@ margin:10px 0;
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Ibn_Manzur.jpg">
 <h3>ابن منظور</h3>
 <p>
-صاحب معجم "لسان العرب"
-أحد أشهر معاجم اللغة العربية.
+صاحب معجم "لسان العرب".
 </p>
 </div>
 
@@ -413,7 +406,9 @@ margin:10px 0;
 </div>
 
 <footer>
-جميع الحقوق محفوظة © 2026
+
+جميع الحقوق محفوظة لمدرسة أم العمد الثانوية المختلطة  © 2026
+
 </footer>
 
 <div class="bottom-border"></div>
@@ -431,9 +426,7 @@ const position=section.getBoundingClientRect().top;
 const screenPosition=window.innerHeight/1.3;
 
 if(position<screenPosition){
-
 section.classList.add("show");
-
 }
 
 });
