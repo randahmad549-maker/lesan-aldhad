@@ -80,13 +80,7 @@
       box-shadow: 0 10px 30px rgba(212,175,55,0.5);
       border: 3px double #d4af37;
       position: relative;
-      opacity: 0;
-      transform: translateY(40px);
       transition: all 1s ease;
-    }
-    .section.show {
-      opacity: 1;
-      transform: translateY(0);
     }
     .section::before {
       content: "❁ ❖ ❁";
@@ -197,14 +191,14 @@
   </header>
 
   <!-- تاريخ اللغة -->
-  <div class="section" id="history">
+  <div class="section show" id="history">
     <h2>تاريخ اللغة العربية</h2>
     <p>تعد اللغة العربية من أقدم اللغات السامية في العالم، وقد نشأت في شبه الجزيرة العربية ثم تطورت عبر العصور حتى أصبحت لغة عالمية يتحدث بها مئات الملايين.</p>
     <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Arab_world_map.png" alt="خريطة العالم العربي">
   </div>
 
   <!-- علوم اللغة -->
-  <div class="section" id="sciences">
+  <div class="section show" id="sciences">
     <h2>علوم اللغة العربية</h2>
     <h3>علم النحو</h3>
     <p>يهتم علم النحو بدراسة قواعد الجملة العربية وتحديد مواقع الكلمات فيها.</p>
@@ -217,15 +211,22 @@
   </div>
 
   <!-- الخط العربي -->
-  <div class="section" id="calligraphy">
+  <div class="section show" id="calligraphy">
     <h2>فن الخط العربي</h2>
     <p>الخط العربي من أجمل الفنون الإسلامية وقد استخدم في تزيين المساجد والمصاحف.</p>
     <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Arabic_calligraphy_2.jpg" alt="فن الخط العربي">
   </div>
 
   <!-- انتشار العربية -->
-  <div class="section" id="influence">
+  <div class="section show" id="influence">
     <h2>انتشار اللغة العربية في العالم</h2>
     <p>تعد اللغة العربية إحدى اللغات العالمية الكبرى وهي لغة رسمية في العديد من الدول.</p>
     <div class="map">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Arabic-speaking-world.png" alt="انتشار
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Arabic-speaking-world.png" alt="انتشار اللغة العربية">
+    </div>
+  </div>
+
+  <!-- العلماء -->
+  <div class="section show" id="scholars">
+    <h2>أعلام اللغة العربية</h2>
+    <div class="schol
